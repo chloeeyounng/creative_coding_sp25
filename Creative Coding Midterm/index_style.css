@@ -6,6 +6,8 @@
 
 body {
   font-family: "Lacquer", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .sidenav {
