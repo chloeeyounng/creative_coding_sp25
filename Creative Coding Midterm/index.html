@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index_style.css" />
+  </head>
+
+  <body>
+    <div class="sidenav">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Final_Chloe_Young_Logo.gif" alt="Chloe Young Logo" />
+        </a>
+      </div>
+
+      <div class="sidenav-links">
+        <a href="index.html">Home</a>
+        <button class="dropdown-btn">Projects</button>
+        <div class="dropdown-container">
+          <a href="handmade.html">Handmade</a>
+          <a href="digital.html">Digital</a>
+          <a href="illustrations.html">Illustrations</a>
+          <a href="code.html">Coding</a>
+        </div>
+        <a href="about.html">About</a>
+      </div>
+
+      <div class="keep-in-touch">
+        <p>Keep in Touch!</p>
+        <a href="https://www.instagram.com/chloeeyounng" target="_blank"
+          >Instagram</a
+        >
+        <a
+          href="https://www.linkedin.com/in/chloe-alexandria-young"
+          target="_blank"
+          >LinkedIn</a
+        >
+      </div>
+    </div>
+
+    <script>
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      for (let i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          dropdownContent.style.display =
+            dropdownContent.style.display === "block" ? "none" : "block";
+        });
+      }
+    </script>
+
+    <div class="content">
+      <div id="sketch-container"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
+    <script src="mold.js"></script>
+    <script src="mySketch.js"></script>
+  </body>
+</html>

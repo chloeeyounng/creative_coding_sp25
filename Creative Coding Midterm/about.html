@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="about_style.css" />
+  </head>
+
+  <body>
+    <div class="sidenav">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Final_Chloe_Young_Logo.gif" alt="Chloe Young Logo" />
+        </a>
+      </div>
+
+      <div class="sidenav-links">
+        <a href="index.html">Home</a>
+        <button class="dropdown-btn">Projects</button>
+        <div class="dropdown-container">
+          <a href="handmade.html">Handmade</a>
+          <a href="digital.html">Digital</a>
+          <a href="illustrations.html">Illustrations</a>
+          <a href="code.html">Coding</a>
+        </div>
+        <a href="about.html">About</a>
+      </div>
+
+      <div class="keep-in-touch">
+        <p>Keep in Touch!</p>
+        <a href="https://www.instagram.com/chloeeyounng" target="_blank"
+          >Instagram</a
+        >
+        <a
+          href="https://www.linkedin.com/in/chloe-alexandria-young"
+          target="_blank"
+          >LinkedIn</a
+        >
+      </div>
+    </div>
+
+    <script>
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+    <div class="content">
+      <div class="marquee-section">
+        <div class="marquee-div">
+          <div class="marquee">
+            MORE PROJECTS COMING SOON! &bull; &bull; MORE PROJECTS COMING SOON!
+            &bull; &bull; MORE PROJECTS COMING SOON! &bull; &bull; MORE PROJECTS
+            COMING SOON! &bull; &bull; MORE PROJECTS COMING SOON! &bull; &bull;
+            MORE PROJECTS COMING SOON! &bull; &bull; MORE PROJECTS COMING SOON!
+            &bull; &bull; MORE PROJECTS COMING SOON! &bull; &bull; MORE PROJECTS
+            COMING SOON! &bull; &bull; MORE PROJECTS COMING SOON! &bull; &bull;
+            MORE PROJECTS COMING SOON! &bull; &bull; MORE PROJECTS COMING SOON!
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <h1>HELLO!</h1>
+        <p>
+          My name is Chloe. I am an Integrated Design and Media student based in
+          New York City.
+        </p>
+        <p>
+          I love working with all types of mediums, but my heart will always
+          find its way back to markers and a canvas. I am excited to explore
+          diverse styles and forms of design to broaden my artistic palette!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

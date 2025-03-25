@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Lacquer", sans-serif;
+  background-color: black;
+}
+
+.sidenav {
+  height: 100vh;
+  width: 20vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: url("pointer_finger_cursor.png") 20 20, auto;
+}
+
+.sidenav-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  cursor: url("pointer_finger_cursor.png") 20 20, auto;
+}
+
+.sidenav a,
+.dropdown-btn {
+  padding: 12px 12px 12px 40px;
+  font-family: "Lacquer", sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  cursor: url("pointer_finger_cursor.png") 20 20, auto;
+}
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+  text-decoration: underline;
+  cursor: url("thumbtack_cursor.png") 20 20, auto;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: black;
+  padding-left: 8px;
+  cursor: url("thumbtack_cursor.png") 20 20, auto;
+}
+
+.dropdown-container a {
+  color: #ff10f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: url("thumbtack_cursor.png") 20 20, auto;
+}
+
+.logo {
+  width: 100%;
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url("thumbtack_cursor.png") 20 20, auto;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  cursor: url("thumbtack_cursor.png") 20 20, auto;
+}
+
+.keep-in-touch {
+  width: 100%;
+  padding: 15px 15px;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  cursor: url("pointer_finger_cursor.png") 20 20, auto;
+}
+
+.keep-in-touch p {
+  color: yellow;
+  font-size: 16px;
+  align-items: left;
+  cursor: url("pointer_finger_cursor.png") 20 20, auto;
+}
+
+.keep-in-touch a {
+  color: #ff10f0;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  align-items: left;
+  padding-left: 0;
+  margin-left: 0;
+  cursor: url("thumbtack_cursor.png") 20 20, auto;
+}
+
+.keep-in-touch a:hover {
+  text-decoration: underline;
+  cursor: url("thumbtack_cursor.png") 20 20, auto;
+}
+
+div.content {
+  height: 100vh;
+  width: 80vw;
+  margin-left: 20vw;
+  cursor: url("pointer_finger_cursor.png") 20 20, auto;
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns */
+.column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+  position: relative;
+}
+
+/* Ensure images keep their original size */
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Overlay container */
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+/* The overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Show overlay on hover */
+.container:hover .overlay {
+  opacity: 1;
+}
+
+/* Overlay text */
+.text {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .sidenav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .sidenav a,
+  .dropdown-btn {
+    float: left;
+    padding: 12px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .logo img {
+    display: none;
+  }
+
+  .keep-in-touch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .keep-in-touch p,
+  .keep-in-touch a {
+    margin-right: 15px;
+    font-size: 12px;
+  }
+
+  div.content {
+    margin-left: 0;
+    width: 100vw;
+  }
+}
